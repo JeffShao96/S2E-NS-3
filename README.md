@@ -1,3 +1,6 @@
+S2E-NS-3 Build Instructions
+=====
+
 ##Build S2E by using s2e-env
 We highly recommand to build with s2e-env. However, you can manually build S2E as well. 
 
