@@ -143,10 +143,12 @@ install_systemtap
 #install the NS-3
 sudo apt-get -y install g++ python3 gcc 
 git clone https://github.com/JeffShao96/Symbolic-NS3
+cp -r Symbolic-NS3/. .
 tar -xJvf s2e.tar.xz
 cd ns-3-dev
-./configure
-./waf --build
+./waf configure
+./waf build
+cd ..
 
 # Install CGC tools if we have a CGC kernel
 if [ $(has_cgc_kernel) -eq 1 ]; then
