@@ -140,6 +140,14 @@ sudo apt-get update
 install_i386
 install_systemtap
 
+#install the NS-3
+sudo apt-get -y install g++ python3 gcc 
+git clone https://github.com/JeffShao96/Symbolic-NS3
+tar -xJvf s2e.tar.xz
+cd ns-3-dev
+./configure
+./waf --build
+
 # Install CGC tools if we have a CGC kernel
 if [ $(has_cgc_kernel) -eq 1 ]; then
     install_apt_packages
@@ -147,12 +155,7 @@ if [ $(has_cgc_kernel) -eq 1 ]; then
 fi
 
 install_kernel
-sudo apt-get -y install g++ python3 gcc 
-tar -xJvf s2e.tar.xz
-git clone https://github.com/JeffShao96/Symbolic-NS3
-cd ns-3-dev
-./configure
-./waf --build
+
 
 # QEMU will stop (-no-reboot)
 sudo reboot
