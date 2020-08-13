@@ -41,3 +41,7 @@ We highly recommand to build S2E with s2e-env. However, you can manually build S
 The process takes about 60 mins.
 
 ## S2E-NS-3 image
+    cd $S2EDIR
+    wget -O source/guest-images/Linux/s2e_home/launch.sh https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/launch.sh
+    sudo chmod ugo+r /boot/vmlinu*
+    s2e image_build debian-9.2.1-i386
