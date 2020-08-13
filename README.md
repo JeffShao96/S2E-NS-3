@@ -50,5 +50,6 @@ Since S2E will disable the networking when running, we need to install the NS-3 
 
 ### Build the image
 Run `s2e image_build` to check what image is available.
+
     sudo chmod ugo+r /boot/vmlinu*
     s2e image_build <image name>
