@@ -151,10 +151,10 @@ target_init
 # Download the target file to analyze
 
 
-${S2EGET} "first.cc"                #use [S2EGET] to pass the script in to the image
-cp first.cc ns-3-dev/scratch        #copy the script to scratch folder
+${S2EGET} "Sym-NS-3-Demo.cc"                #use [S2EGET] to pass the script in to the image
+cp Sym-NS-3-Demo.cc ns-3-dev/scratch        #copy the script to scratch folder
 cd ns-3-dev                         #run the script
-./waf --run first
+./waf --run Sym-NS-3-Demo
 
 ##### NO TARGET HAS BEEN SPECIFIED DURING PROJECT CREATION #####
 ##### Please fetch and execute the target files manually   #####
