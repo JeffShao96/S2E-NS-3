@@ -1,7 +1,6 @@
 # S2E-NS-3 Build Instructions
-[Build S2E](#build-s2e-with-s2e-env)
-
-[Build S2E-NS-3 image](#s2e-ns-3-image)
+*[Build S2E](#build s2e with s2e-env)
+*[Build S2E-NS-3 image](#build-s2e-ns-3 image)
 
 ## Build S2E with s2e-env
 We highly recommand to build S2E with s2e-env. However, you can manually build S2E as well. 
@@ -40,8 +39,15 @@ We highly recommand to build S2E with s2e-env. However, you can manually build S
     s2e build
 The process takes about 60 mins.
 
-## S2E-NS-3 image
+## Build S2E-NS-3 image
+Since S2E will disable the networking when running, we need to install the NS-3 into the image before we run S2E-NS-3.
+
+### Replace the launch.sh 
+`launch.sh` is the script runs after image was created. We have already modified it to install the NS-3.If you want to install other softwares, you can use that as an example.
     cd $S2EDIR
     wget -O source/guest-images/Linux/s2e_home/launch.sh https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/launch.sh
+
+### Build the image
+Run `s2e image_build` to check what image is available.
     sudo chmod ugo+r /boot/vmlinu*
-    s2e image_build debian-9.2.1-i386
+    s2e image_build <image name>
