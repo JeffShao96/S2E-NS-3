@@ -5,8 +5,8 @@
 We highly recommand to build with s2e-env. However, you can manually build S2E as well. 
 
 ### Install the packages for s2e-env
-  sudo apt-get update
-  sudo apt-get install git gcc python3 python3-dev python3-venv
+    sudo apt-get update
+    sudo apt-get install git gcc python3 python3-dev python3-venv
 
 ### Clone the source code
 `git clone https://github.com/s2e/s2e-env.git`
