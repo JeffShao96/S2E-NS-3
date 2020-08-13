@@ -55,6 +55,31 @@ Since NS-3 is not a 'small' software, sometimes we need to extend the image or m
 Modify `$S2EDIR/source/guest-images/images.json`
 
 Example:
+```
+    "cgc_debian-9.2.1-i386": {
+      "name": "Debian i386 image with CGC kernel and user-space packages",
+      "image_group": "linux",
+      "url": "https://drive.google.com/open?id=1vexW3emZ5-jQ2hohelCfM3iAdFmcFqbq",
+      "iso": {
+        "url": "https://cdimage.debian.org/mirror/cdimage/archive/9.2.1/i386/iso-cd/debian-9.2.1-i386-netinst.iso"
+      },
+      "os": {
+        "name": "cgc_debian",
+        "version": "9.2.1",
+        "arch": "i386",
+        "build": "",
+        "binary_formats": ["decree"]
+      },
+      "hw": {
+        "default_disk_size": "4G",                  --This is the disk size of image, make sure your hardware have enough space before you extend it
+        "default_snapshot_size": "256M",            --This is the Memory size, you should not set it too large, "1G" is recommended.
+        "nic": "e1000"
+      }
+    }
+
+```
+
+
 
 
 
@@ -78,3 +103,17 @@ For Example:
 If KVM is not available, use the following command:
 
     s2e image_build -n <image_name>
+    
+### Create and run the project
+
+create an empty project in S2E:
+
+    s2e new_project -m -i <image_name> -n <project_name> -t linux
+
+Eamxple:
+Create an empty project named pointToPoint, type is linux, it will run in a 32-bit system `debian-9.2.1-i386`
+
+    s2e new_project -m -i debian-9.2.1-i386 -n pointToPoint -t linux
+    
+
+    
