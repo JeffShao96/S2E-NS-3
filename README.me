@@ -13,6 +13,9 @@ cd s2e-env
 python3 -m venv venv
 . venv/bin/activate
 
+#Do the following steps in the virtual environment
+#If you want to quit the virtual environment, use command `deactivate`
+
 #Upgrade the python packages
 pip install --upgrade pip
 
@@ -21,3 +24,9 @@ pip install .
 
 # Note: if your pip version is earlier than v19, use the following command:
 pip install --process-dependency-links .
+
+
+##Build S2E
+#create a directory
+mkdir $S2EDIR
+cd $S2EDIR
