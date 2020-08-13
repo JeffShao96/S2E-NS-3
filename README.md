@@ -48,8 +48,22 @@ Since S2E will disable the networking when running, we need to install the NS-3 
     cd $S2EDIR
     wget -O source/guest-images/Linux/s2e_home/launch.sh https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/launch.sh
 
+### modify the image size
+Since NS-3 is not a 'small' software, we need to extend the 
+
 ### Build the image
+
+Give the authority to S2E.
+
+    sudo usermod -a -G docker $(whoami)
+    sudo chmod ugo+r /boot/vmlinu*
+
+**Log out and log back** in so that your group membership is re-evaluated.
+
 Run `s2e image_build` to check what image is available.
 
-    sudo chmod ugo+r /boot/vmlinu*
     s2e image_build <image name>
+
+If KVM is not available, use the following command:
+
+    s2e image_build -n <image name>
