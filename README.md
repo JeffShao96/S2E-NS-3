@@ -1,6 +1,7 @@
 # S2E-NS-3 Build Instructions
-*[Build S2E](#build s2e with s2e-env)
-*[Build S2E-NS-3 image](#build-s2e-ns-3 image)
+[Build S2E](#build-s2e-with-s2e-env)
+
+[Build S2E-NS-3 image](#build-s2e-ns-3-image)
 
 ## Build S2E with s2e-env
 We highly recommand to build S2E with s2e-env. However, you can manually build S2E as well. 
@@ -49,7 +50,13 @@ Since S2E will disable the networking when running, we need to install the NS-3 
     wget -O source/guest-images/Linux/s2e_home/launch.sh https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/launch.sh
 
 ### modify the image size
-Since NS-3 is not a 'small' software, we need to extend the 
+Since NS-3 is not a 'small' software, sometimes we need to extend the image or memory size.
+
+Modify `$S2EDIR/source/guest-images/images.json`
+
+Example:
+
+
 
 ### Build the image
 
@@ -62,8 +69,12 @@ Give the authority to S2E.
 
 Run `s2e image_build` to check what image is available.
 
-    s2e image_build <image name>
+    s2e image_build <image_name>
+
+For Example:
+
+    s2e image_build debian-9.2.1-i386
 
 If KVM is not available, use the following command:
 
-    s2e image_build -n <image name>
+    s2e image_build -n <image_name>
