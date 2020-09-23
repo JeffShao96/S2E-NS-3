@@ -115,5 +115,17 @@ Create an empty project named pointToPoint, type is linux, it will run in a 32-b
 
     s2e new_project -m -i debian-9.2.1-i386 -n pointToPoint -t linux
     
+We provide a demo to show how symbolic works in NS-3 system:
+    
+    cd $S2EDIR/project/<project_name>
+    wget -O https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/demo.cc
+    wget -O bootstrap.sh https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/bootstrap.sh
+    
+Executed the prject:
+
+    ./launch-s2e.sh
+    
+You can use [demo.cc](./demo.cc) and [bootstrap.sh](./bootstrap.sh) as example to write your own project.
+    
 
     
