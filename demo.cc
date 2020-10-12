@@ -26,10 +26,9 @@
 #include "/home/s2e/s2e/s2e.h"
 #include "ctime"
 
-// Default Network Topology
+//Network Topology
 //
-//       10.1.1.0
-// n0 -------------- n1
+// snda -------rcv------- sndb
 //    point-to-point
 //
  
