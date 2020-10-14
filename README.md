@@ -113,7 +113,7 @@ create an empty project in S2E:
 Eamxple:
 Create an empty project named pointToPoint, type is linux, it will run in a 32-bit system `debian-9.2.1-i386`
 
-    s2e new_project -m -i debian-9.2.1-i386 -n pointToPoint -t linux
+    s2e new_project -m -i debian-9.2.1-i386 -n demo -t linux
     
 We provide a demo to show how symbolic works in NS-3 system:
     
