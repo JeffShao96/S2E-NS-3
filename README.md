@@ -118,7 +118,7 @@ Create an empty project named pointToPoint, type is linux, it will run in a 32-b
 We provide a demo to show how symbolic works in NS-3 system:
     
     cd $S2EDIR/project/<project_name>
-    wget -O https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/demo.cc
+    wget -O demo.cc https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/demo.cc
     wget -O bootstrap.sh https://raw.githubusercontent.com/JeffShao96/S2E-NS-3/master/bootstrap.sh
     
 Executed the prject:
