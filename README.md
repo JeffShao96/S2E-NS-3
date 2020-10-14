@@ -94,11 +94,11 @@ Give the authority to S2E.
 
 Run `s2e image_build` to check what image is available.
 
-    s2e image_build <image_name>
+    s2e image_build <image_name> -g
 
 For Example:
 
-    s2e image_build debian-9.2.1-i386
+    s2e image_build debian-9.2.1-i386 -g
 
 If KVM is not available, use the following command:
 
